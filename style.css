@@ -1,0 +1,3029 @@
+/*
+ * Metro UI CSS v 0.1.1
+ * Copyright 2012 Sergey Pimenov
+ * Licensed under the MIT Lilcense
+ */
+/*! normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ * Remove excess height in iOS5 devices
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+[hidden] {
+  display: none;
+}
+/* =============================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+
+}
+/*
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+/*
+ * Addresses margins handled incorrectly in IE6/7
+ */
+body {
+  margin: 0;
+}
+/* =============================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+a:focus {
+  outline: thin dotted;
+}
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+a:hover,
+a:active {
+  outline: 0;
+}
+/* =============================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE6/7
+ * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+*/
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+dfn {
+  font-style: italic;
+}
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/*
+ * Addresses margins set differently in IE6/7
+ */
+p,
+pre {
+  margin: 1em 0;
+}
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+/* 1 */
+q {
+  quotes: none;
+}
+/* 2 */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+small {
+  font-size: 75%;
+}
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+/*
+ * Addresses paddings set differently in IE6/7
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+/*
+ * Corrects list images handled incorrectly in IE7
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+  border: 0;
+  /* 1 */
+
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+
+}
+/*
+ * Corrects overflow displayed oddly in IE9
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* =============================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11
+ */
+figure {
+  margin: 0;
+}
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+form {
+  margin: 0;
+}
+/*
+ * Define consistent border, margin, and padding
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects text not wrapping in FF3
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+legend {
+  border: 0;
+  /* 1 */
+
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+
+  *margin-left: -7px;
+  /* 3 */
+
+}
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+
+  margin: 0;
+  /* 2 */
+
+  vertical-align: baseline;
+  /* 3 */
+
+  *vertical-align: middle;
+  /* 3 */
+
+}
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+button,
+input {
+  line-height: normal;
+  /* 1 */
+
+}
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  /* 1 */
+
+  -webkit-appearance: button;
+  /* 2 */
+
+  *overflow: visible;
+  /* 3 */
+
+}
+/*
+ * Re-set default cursor for disabled elements
+ */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9
+ * 2. Removes excess padding in IE8/9
+ * 3. Removes excess padding in IE7
+      Known issue: excess padding remains in IE6
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+
+  padding: 0;
+  /* 2 */
+
+  *height: 13px;
+  /* 3 */
+
+  *width: 13px;
+  /* 3 */
+
+}
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+
+  box-sizing: content-box;
+}
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X
+ */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+
+  vertical-align: top;
+  /* 2 */
+
+}
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+ * Metro UI CSS v 0.1.1
+ * Copyright 2012 Sergey Pimenov
+ * Licensed under the MIT Lilcense
+ *
+ * Routines.less
+ */
+.place-left {
+  float: left !important;
+  margin-right: 10px;
+}
+.place-right {
+  float: right !important;
+  margin-left: 10px;
+}
+.scroll-y,
+.scroll-vertical {
+  overflow-y: scroll;
+}
+.scroll-x,
+.scroll-horizontal {
+  overflow-x: scroll;
+}
+.pos-rel {
+  position: relative;
+}
+.pos-abs {
+  position: absolute;
+}
+.pos-fix {
+  position: fixed;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.no-overflow {
+  overflow: hidden;
+}
+.no-display {
+  display: none;
+}
+.as-block {
+  display: block;
+  float: none !important;
+}
+.as-inline-block {
+  display: inline-block;
+}
+.nlm {
+  margin-left: 0 !important;
+}
+.nrm {
+  margin-right: 0 !important;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.padding5 {
+  padding: 5px;
+}
+.padding10 {
+  padding: 10px;
+}
+.padding15 {
+  padding: 15px;
+}
+.padding20 {
+  padding: 20px;
+}
+.padding30 {
+  padding: 30px;
+}
+.padding40 {
+  padding: 40px;
+}
+.padding80 {
+  padding: 80px;
+}
+.selected {
+  border: 4px #2d89ef solid;
+}
+.selected:after {
+  width: 0;
+  height: 0;
+  border-top: 40px solid #2d89ef;
+  border-left: 40px solid transparent;
+  position: absolute;
+  display: block;
+  right: 0;
+  content: ".";
+  top: 0;
+  z-index: 1000;
+}
+.selected:before {
+  position: absolute;
+  content: "\2714";
+  color: #fff;
+  right: 5px;
+  font-family: Tahoma;
+  z-index: 2000;
+}
+/*
+ * Metro UI CSS v 0.1.1
+ * Copyright 2012 Sergey Pimenov
+ * Licensed under the MIT Lilcense
+ *
+ * Variables.less
+ */
+.fg-color-blue {
+  color: #2d89ef !important;
+}
+.fg-color-blueLight {
+  color: #44a3aa !important;
+}
+.fg-color-blueDark {
+  color: #0a5ac2 !important;
+}
+.fg-color-green {
+  color: #00a300 !important;
+}
+.fg-color-greenLight {
+  color: #99b433 !important;
+}
+.fg-color-greenDark {
+  color: #005200 !important;
+}
+.fg-color-red {
+  color: #b91d47 !important;
+}
+.fg-color-yellow {
+  color: #ffc40d !important;
+}
+.fg-color-orange {
+  color: #e3a21a !important;
+}
+.fg-color-orangeDark {
+  color: #da532c !important;
+}
+.fg-color-pink {
+  color: #c3325f !important;
+}
+.fg-color-pinkDark {
+  color: #9f00a7 !important;
+}
+.fg-color-purple {
+  color: #603cba !important;
+}
+.fg-color-darken {
+  color: #1d1d1d !important;
+}
+.fg-color-white {
+  color: #ffffff !important;
+}
+.fg-color-grayDark {
+  color: #525252 !important;
+}
+.bg-color-blue {
+  background-color: #2d89ef !important;
+}
+.bg-color-blueLight {
+  background-color: #44a3aa !important;
+}
+.bg-color-blueDark {
+  background-color: #0a5ac2 !important;
+}
+.bg-color-green {
+  background-color: #00a300 !important;
+}
+.bg-color-greenLight {
+  background-color: #99b433 !important;
+}
+.bg-color-greenDark {
+  background-color: #005200 !important;
+}
+.bg-color-red {
+  background-color: #b91d47 !important;
+}
+.bg-color-yellow {
+  background-color: #ffc40d !important;
+}
+.bg-color-orange {
+  background-color: #e3a21a !important;
+}
+.bg-color-orangeDark {
+  background-color: #da532c !important;
+}
+.bg-color-pink {
+  background-color: #c3325f !important;
+}
+.bg-color-pinkDark {
+  background-color: #9f00a7 !important;
+}
+.bg-color-purple {
+  background-color: #603cba !important;
+}
+.bg-color-darken {
+  background-color: #1d1d1d !important;
+}
+.bg-color-white {
+  background-color: #ffffff !important;
+}
+.bg-color-grayDark {
+  background-color: #525252 !important;
+}
+[class*=border-color] {
+  border: 2px solid;
+}
+.border-color-blue {
+  border-color: #2d89ef !important;
+}
+.border-color-blueLight {
+  border-color: #44a3aa !important;
+}
+.border-color-blueDark {
+  border-color: #0a5ac2 !important;
+}
+.border-color-green {
+  border-color: #00a300 !important;
+}
+.border-color-greenLight {
+  border-color: #99b433 !important;
+}
+.border-color-greenDark {
+  border-color: #005200 !important;
+}
+.border-color-red {
+  border-color: #b91d47 !important;
+}
+.border-color-yellow {
+  border-color: #ffc40d !important;
+}
+.border-color-orange {
+  border-color: #e3a21a !important;
+}
+.border-color-orangeDark {
+  border-color: #da532c !important;
+}
+.border-color-pink {
+  border-color: #c3325f !important;
+}
+.border-color-pinkDark {
+  border-color: #9f00a7 !important;
+}
+.border-color-purple {
+  border-color: #603cba !important;
+}
+.border-color-darken {
+  border-color: #1d1d1d !important;
+}
+.border-color-white {
+  border-color: #ffffff !important;
+}
+.border-color-grayDark {
+  border-color: #525252 !important;
+}
+/*
+ * Metro UI CSS v 0.1.1
+ * Copyright 2012 Sergey Pimenov
+ * Licensed under the MIT Lilcense
+ *
+ * Bricks.less
+ *
+ */
+.item-margin {
+  margin: 0 10px 10px 0;
+}
+.column-margin {
+  margin: 0 20px 10px 0;
+}
+.group-margin {
+  margin: 0 80px 10px 0;
+}
+.brick {
+  position: relative;
+  margin: 0 10px 10px 0;
+  display: block;
+  float: none !important;
+}
+.short-brick {
+  position: relative;
+  margin: 0 10px 10px 0;
+  display: block;
+  float: none !important;
+  width: 150px;
+  height: 150px;
+}
+.medium-brick {
+  position: relative;
+  margin: 0 10px 10px 0;
+  display: block;
+  float: none !important;
+  width: 310px;
+  height: 150px;
+}
+.badge {
+  position: relative;
+  margin: 0 10px 10px 0;
+  display: block;
+  float: none !important;
+  width: 35px;
+  height: 30px;
+  padding-top: 5px;
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 9pt;
+  color: #1d1d1d;
+  text-align: center;
+}
+.square {
+  display: block;
+  float: left;
+  margin-right: 10px;
+  height: 20px;
+  width: 20px;
+}
+/*
+ * Metro UI CSS v 0.1.1
+ * Copyright 2012 Sergey Pimenov
+ * Licensed under the MIT Lilcense
+ *
+ * Typography.less
+ *
+ */
+@font-face {
+  font-family: 'PT Serif Caption';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Serif Caption'), local('PTSerif-Caption'), url(http://themes.googleusercontent.com/static/fonts/ptserifcaption/v4/7xkFOeTxxO1GMC1suOUYWWhBabBbEjGd1iRmpyoZukE.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzJ1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTZ1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/EInbV5DfGHOiMmvb1Xr-hp1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/K88pR3goAWT7BTt32Z01mz8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+/*
+@baseFontUI: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+@baseFontText: 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+
+.font-ui          {font-family: @baseFontUI;}
+.font-text        {font-family: @baseFontText;}
+
+.light-text            {font-weight: 200;}
+.semilight-text        {font-weight: 300;}
+.regular-text          {font-weight: 400;}
+.semibold-text         {font-weight: 600;}
+.bold-text             {font-weight: 700;}
+*/
+.text-rest-state {
+  color: #000000;
+}
+.text-rest2-state {
+  color: rgba(0, 0, 0, 0.6);
+}
+.text-hover-state {
+  color: rgba(0, 0, 0, 0.8);
+}
+.text-pressed-state {
+  color: rgba(0, 0, 0, 0.4);
+}
+#font .header {
+  font-family: 'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 42pt;
+  letter-spacing: 0.00em;
+  line-height: 44pt;
+}
+#font .subheader,
+#font .subheader-secondary {
+  font-family: 'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 20pt;
+  letter-spacing: 0.01em;
+  line-height: 24pt;
+}
+#font .subheader-smaller,
+#font .subheader-secondary-smaller {
+  font-family: 'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.01em;
+  line-height: 24pt;
+  font-size: 16pt;
+}
+#font .small-subheader,
+#font .small-subheader-secondary {
+  font-family: 'Segoe UI Semibold', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 11pt;
+  letter-spacing: 0.01em;
+  line-height: 14pt;
+}
+#font .navigation {
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 11pt;
+  letter-spacing: 0.01em;
+  line-height: 14pt;
+}
+#font .body,
+#font .body-secondary,
+#font .normal {
+  font-family: 'Segoe UI Semilight', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 11pt;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+}
+#font .link {
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 11pt;
+}
+#font .tertiary,
+#font .tertiary-secondary {
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 9pt;
+}
+#font .control {
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 9pt;
+}
+#font .small {
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 8pt;
+}
+#font .long-text {
+  font-family: 'PT Serif Caption', sans-serif, serif !important;
+  font-weight: 300;
+  font-size: 10pt;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+}
+#font .long-text-smaller {
+  font-family: 'PT Serif Caption', sans-serif, serif !important;
+  font-weight: 300;
+  font-size: 10pt;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+  font-size: 9pt;
+}
+#font .long-text-lead {
+  font-family: 'PT Serif Caption', sans-serif, serif !important;
+  font-weight: 300;
+  font-size: 10pt;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+  font-size: 20pt;
+}
+#state .header,
+#state .subheader,
+#state .small-subheader,
+#state .navigation,
+#state .body,
+#state .tertiary {
+  color: #000000;
+}
+#state .header:hover,
+#state .subheader:hover,
+#state .small-subheader:hover,
+#state .navigation:hover,
+#state .body:hover,
+#state .tertiary:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+#state .header:active,
+#state .subheader:active,
+#state .small-subheader:active,
+#state .navigation:active,
+#state .body:active,
+#state .tertiary:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+#state .subheader-secondary,
+#state .subheader-secondary-smaller,
+#state .small-subheader,
+#state .small-subheader-secondary,
+#state .body-secondary,
+#state .tertiary-secondary {
+  color: rgba(0, 0, 0, 0.6);
+}
+#state .subheader-secondary:hover,
+#state .subheader-secondary-smaller:hover,
+#state .small-subheader:hover,
+#state .small-subheader-secondary:hover,
+#state .body-secondary:hover,
+#state .tertiary-secondary:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+#state .subheader-secondary:active,
+#state .subheader-secondary-smaller:active,
+#state .small-subheader:active,
+#state .small-subheader-secondary:active,
+#state .body-secondary:active,
+#state .tertiary-secondary:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+#state .link {
+  color: #4f1acb;
+}
+#state .link:hover {
+  color: rgba(79, 26, 203, 0.8);
+}
+#state .link:active {
+  color: rgba(79, 26, 203, 0.6);
+}
+a,
+.link {
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 11pt;
+  color: #4f1acb;
+  text-decoration: none;
+}
+a:hover,
+.link:hover {
+  color: rgba(79, 26, 203, 0.8);
+}
+a:active,
+.link:active {
+  color: rgba(79, 26, 203, 0.6);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+  padding: 0;
+}
+h1 {
+  font-family: 'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 42pt;
+  letter-spacing: 0.00em;
+  line-height: 44pt;
+  color: #000000;
+}
+h1:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+h1:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+h2 {
+  font-family: 'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 20pt;
+  letter-spacing: 0.01em;
+  line-height: 24pt;
+  color: #000000;
+}
+h2:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+h2:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+h3 {
+  font-family: 'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 20pt;
+  letter-spacing: 0.01em;
+  line-height: 24pt;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16pt;
+  line-height: 24px;
+}
+h3:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+h3:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+h4 {
+  font-family: 'Segoe UI Semibold', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 11pt;
+  letter-spacing: 0.01em;
+  line-height: 14pt;
+  color: #000000;
+  color: rgba(0, 0, 0, 0.6);
+}
+h4:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+h4:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+h4:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+h4:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+h5 {
+  font-family: 'Segoe UI Semibold', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 11pt;
+  letter-spacing: 0.01em;
+  line-height: 14pt;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 90%;
+}
+h5:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+h5:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+h6 {
+  font-family: 'Segoe UI Semibold', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 11pt;
+  letter-spacing: 0.01em;
+  line-height: 14pt;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 80%;
+}
+h6:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+h6:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+body,
+p {
+  font-family: 'Segoe UI Semilight', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 11pt;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+}
+p.long-text {
+  font-family: 'PT Serif Caption', sans-serif, serif !important;
+  font-weight: 300;
+  font-size: 10pt;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+}
+p {
+  margin: 0 0 10px;
+}
+p.indent:first-letter {
+  padding-left: 25px;
+}
+.lead {
+  font-size: 120%;
+  line-height: 26px;
+}
+.tertiary-info-text,
+.tertiary-text {
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 9pt;
+  color: #000000;
+}
+.tertiary-info-text:hover,
+.tertiary-text:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+.tertiary-info-text:active,
+.tertiary-text:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+.tertiary-info-secondary-text,
+.tertiary-secondary-text {
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 9pt;
+  color: rgba(0, 0, 0, 0.6);
+}
+.tertiary-info-secondary-text:hover,
+.tertiary-secondary-text:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+.tertiary-info-secondary-text:active,
+.tertiary-secondary-text:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase !important;
+}
+abbr[title] {
+  cursor: help !important;
+}
+address {
+  display: block;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI Semilight', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 11pt;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+  line-height: 20px;
+  font-style: normal;
+}
+blockquote {
+  margin: 0;
+  padding: 5px 20px;
+  border-left: 4px #ccc solid;
+  display: block;
+  background-color: rgba(204, 204, 204, 0.1);
+}
+blockquote p {
+  margin-bottom: 0;
+}
+blockquote small:before {
+  content: '\2014';
+  color: rgba(0, 0, 0, 0.4);
+  margin-right: 5px;
+}
+blockquote.place-right {
+  float: none !important;
+  text-align: right;
+  border: 0;
+  border-right: 4px #ccc solid;
+}
+blockquote.place-right small {
+  text-align: right;
+}
+blockquote.place-right small:before {
+  content: "";
+}
+blockquote.place-right small:after {
+  content: '\2014';
+  color: rgba(0, 0, 0, 0.4);
+  margin-left: 5px;
+}
+ul,
+ol {
+  padding: 0;
+  margin: 0 0 10px 0px;
+  display: block;
+}
+ul:nth-child(1) {
+  margin-left: 25px;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0 !important;
+}
+ul {
+  list-style-position: inside;
+  list-style-type: disc;
+}
+ul ul {
+  list-style-type: circle;
+}
+ul,
+ol {
+  list-style-position: inside;
+}
+ul li,
+ol li {
+  display: list-item;
+  font-size: 14px;
+  line-height: 20px;
+}
+ol {
+  list-style-type: decimal;
+}
+ul.unstyled,
+ol.unstyled,
+.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+/*
+ * Metro UI CSS v 0.1.1
+ * Copyright 2012 Sergey Pimenov
+ * Licensed under the MIT Lilcense
+ *
+ * Layout.less
+ */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.one-column {
+  -moz-columns: 1;
+  -webkit-columns: 1;
+  columns: 1;
+  -moz-column-gap: 20px;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+}
+.two-columns {
+  -moz-columns: 2;
+  -webkit-columns: 2;
+  columns: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+}
+.three-columns {
+  -moz-columns: 3;
+  -webkit-columns: 3;
+  columns: 3;
+  -moz-column-gap: 20px;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+}
+.four-columns {
+  -moz-columns: 4;
+  -webkit-columns: 4;
+  columns: 4;
+  -moz-column-gap: 20px;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+}
+.five-columns {
+  -moz-columns: 5;
+  -webkit-columns: 5;
+  columns: 5;
+  -moz-column-gap: 20px;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+}
+.page {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  *zoom: 1;
+}
+.page:before,
+.page:after {
+  display: table;
+  content: "";
+}
+.page:after {
+  clear: both;
+}
+.page .page-header {
+  width: 100%;
+  position: relative;
+  display: block;
+}
+.page .page-header .page-header-content {
+  height: 100px;
+  min-height: 100px;
+  width: 100%;
+  position: relative;
+  display: block;
+}
+.page .page-header .page-header-content h1,
+.page .page-header .page-header-content h2,
+.page .page-header .page-header-content h3,
+.page .page-header .page-header-content h4,
+.page .page-header .page-header-content h5 {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 20px;
+  bottom: 0;
+}
+.page .page-header .page-header-content h1 small {
+  font-size: 12pt;
+  margin-left: 5px;
+}
+.page .page-header .page-header-content h1.sub-menu {
+  cursor: pointer;
+}
+.page .page-header .page-header-content h1.sub-menu:after {
+  position: absolute;
+  content: "\3009";
+  display: inline-block;
+  font-size: 10pt;
+  bottom: -5px;
+  right: -15px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.page .page-header .page-header-content  > .page-back {
+  position: absolute;
+  top: 34px;
+  left: 30px;
+}
+.page .page-header .page-header-content .user-login {
+  float: right;
+  margin: 55px 44px 0 0;
+  cursor: pointer;
+}
+.page .page-header .page-header-content .user-login .avatar {
+  float: right;
+  border: 1px #ccc solid;
+  width: 40px;
+  height: 40px;
+}
+.page .page-header .page-header-content .user-login .avatar img {
+  width: 100%;
+  height: 100%;
+}
+.page .page-header .page-header-content .user-login .name {
+  float: left;
+  margin: 0px 10px;
+  text-align: right;
+}
+.page .page-header .page-header-content .user-login .name .first-name {
+  font-family: "Open Sans", sans-serif, sans;
+  font-size: 18pt;
+  display: block;
+  margin: 0;
+}
+.page .page-header .page-header-content .user-login .name .last-name {
+  font-family: "Open Sans", sans-serif, sans;
+  font-size: 10pt;
+  display: block;
+  margin: 0;
+}
+.page .page-region {
+  display: block;
+}
+.page .page-region .page-region-content {
+  padding-top: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 20px;
+  display: block;
+  height: 100%;
+  position: relative;
+}
+.page.secondary .page-header .page-header-content h1,
+.page.secondary .page-header .page-header-content h2,
+.page.secondary .page-header .page-header-content h3,
+.page.secondary .page-header .page-header-content h4,
+.page.secondary .page-header .page-header-content h5 {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 120px;
+  bottom: 0;
+}
+.page.secondary .page-region .page-region-content {
+  padding-left: 120px;
+}
+.page.snapped {
+  width: 33.33%;
+  height: 100%;
+  float: left;
+  border-right: 1px #ccc solid;
+}
+.page.fill {
+  width: 66.66%;
+  height: 100%;
+  float: right;
+  border-left: 1px #ccc solid;
+}
+.page.snapped .page .page-header .page-header-content h1,
+.page.snapped .page .page-header .page-header-content h2,
+.page.snapped .page .page-header .page-header-content h3,
+.page.snapped .page .page-header .page-header-content h4,
+.page.snapped .page .page-header .page-header-content h5 {
+  margin-left: 20px;
+}
+.page.snapped .page .page-region .page-region-content {
+  padding-left: 20px;
+}
+.page.fixed-header .page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.page.fixed-header .page-region {
+  padding-top: 140px;
+}
+.app-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 100px;
+  background-color: #1d1d1d !important;
+}
+.charms {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  min-width: 200px;
+  width: auto;
+}
+.charms.place-left {
+  left: 0;
+  right: auto;
+}
+.message-dialog {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: auto;
+  min-height: 100px;
+  top: 30%;
+  padding: 10px 10px 0;
+}
+.error-bar,
+.warning-bar,
+.info-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  color: #fff;
+  min-height: 100px;
+}
+.error-bar {
+  background-color: #b91d47 !important;
+}
+.warning-bar {
+  background-color: #ffc40d !important;
+}
+.info-bar {
+  background-color: #2d89ef !important;
+}
+/*
+ * Metro UI CSS v 0.1.1
+ * Copyright 2012 Sergey Pimenov
+ * Licensed under the MIT Lilcense
+ *
+ * Buttons.less
+ */
+.modern-ui-logo,
+.metro-ui-logo {
+  height: 28px;
+  width: 28px;
+  display: block;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGESURBVFhH7ZevTsNQFIfbZgKxB9gjIHgABAIcS0CSQIJE4LEIEgQCyQNMIiHhIRAgEAgECWKIySUTCEjLd3t/Cyml3em6DtMvOTn33PM3XdvbBU2SJMmKlssnjuNtZIisa2t50HQNmXAFEvQHsi9X89CzR8M31/wXZwppDpp0aX7v++XBd41q7r5Qg1I0YE8pQYixqbWFpzAMx1pnoPA5vlOZpdDzHdWPoujZGVX4c1iaH8pvhpwJshOpxtxQawM18JYdrlYXdbKIAa4o1pFphrxX8g5qD0CRPsUeZZogfkzeLjJaxAAjZIuit9oqhbgv4veQl+lGFQqfGHwdbqpLH1YMMUdK8WjfysxHlgbHyKfiM7B/obAf5LNiemfQyB1E6VkwBfsGlb9ZvduM+aVFQ3cgDV0S+gHlHrs8LqAC5gEcxLuD6c5pbeVJy9qpNECLCV1aK+lPwO86kD0TF5s2KqD2m7Au7QDtAO0A7QD/PsBcf0zIWWVdfMRmcd+M/vsvRxB8A6+/IU2N93KYAAAAAElFTkSuQmCC);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back-button {
+  height: 32px;
+  width: 32px;
+  display: block;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAbrSURBVGhDzZpPaBRXHMdnZkMJsocchO4hJhYsBAm9GEVxYyJ4ULSQoEIpuQQqeOghpUorIlWsKNQSCx56KQgKFhQSUVBoS02yMYKR9hCk0FCN7mELOaSYSg7ZnX6+b94uyWY3zmw3u/lCMvP+zHvf7+/93m/ee7OuUyV07d69M+d53a7vv+u4brPvOAnH95tNoetm6ChDOu277t9eLpdyGhpSIyMji6b8f6BiAV1dXY3ZbLbbc5zDkN3vQtoWhYLv+7M88yDn+3disdgDxMzbokiILADiDblcrg8GFyGQsNkGCJmiwSnKMrI0WZmgxEnYkUlQZwt1Omy+AWLmKDvned73CFmw2aEQSUAymTwE6Ys81K40HS+SfgipO3Q+TOdpU/EtwAgbMUIP7RykDY1eo/K5n6atc6lU6oapGAKhBNBh3M/lrnPbo7Qh7jg33FjsFKTzVq4ItN3kZ7OnIf5pQYjjpDDI0TBtv1UAHTRjrft5q4Nh1/NE/A+brgrUD0LOQ74PIQ0YKc1k7x159GjSVimJVQWYyOK6QzSYoMEFGj8WZXgrAW66D1K36LOJPudtnz/a4hUoK8CS/4mG4jSU8Xy/d2R8/LEtXlMwGm25bFaGa1MaEf1jY2PXTGERSgowbpPNPjGWJ6rgjwfCTtBqQXMD170LwaRGHwPuLWXAFQJ4MM6DExS0G8vHYttrTT4PwyUwZFs5LryHlkPRxpKX6t56kRfoex7SH8JFL70Ehh1CVIMtNlgmQHGeSxAqmTy18vnVgIhpDHkUEQrdHYj4xBYZFFxIyij8TdYnOTw6NtYblKwP7EkmB3lbD1hXel+jo/zCCEC+z7rOouK8zV434KV5AW5z1pVO2OxgBLB+I5PluQp5zV4bTaX6TWkF2LFjRzPtFPz09evXs8+ePatooVaMzs7OsxD+CiGaGxqFjBkBrSpF3lif5YGpXQE6OjoGsM4r2ntu/7T8qBoI55fgqAmtSGnmqhHAv8O6UvBQqnQfFSLPZTBIGaTevHlzoFrWF+C2wAgM656r4WwEEHH22+sdXaOiFuTzyFmOjERS7wlPSwYsbzYjWhLrGgW1JC+w+flZcwDO2lAd8rQNVIGWDAxRpJdWrckLxo1wdd3jPl2e2SkBfGpK17CoB/kCfD9YyhN4PP4Fe1leEOYaAnUlD+x2VV7T7BJbx7B+ksQplqyXTI1VUExeoZfLFf7+NRlVwNOnT8/a25JgydPnue51+k67ncmkXmCbEVB2zZ1HCcuvCSYnJ7FpeRB4un3P+1X3CqPmrWktuSqo02pv1w3kQlr772QETjICl21+WWzbtm2QEdNIGCBKxyBX+aulC32EC92k74y7p7NziLwemFxmDXQyqLI6EPElIi7apFDTSYzRBzD6IEb/3YN4EPu1kAsJLKTJ/lmQMkhu2LDh/tatW+M2vaZYEvrT3pKQZDbQYcFEU+SpjwjX3WKu2huYg1blEWRYW2w0BSFRDxHaeOH7+3SP8cc9nRKTMauM/BI1Cmotwi79dWa0yNrtnsfaQuebD1TIKBw0tSKiliKI+wFH130M91mznNYRt66o2s8QNek+KmohwriP4xyxScPZCND5POS132zUQavyKoFE0MZ22tpr/87E4/GKDFIKuPhx2m+mXbnPbeXhNQGIrSdIfEPhgt1v1u08qBS0eWHf/icCtG+/wjvLjLYZAQFFVyH/wo7CeZu9bqCTCJGH45xOKGy2E7NXZ2ZmZrG1tfUfRqEHP2tvaWmZePny5V+2uK7o2rWrnZD5AwLeYfJeGB0dNUFHKIyAoNUo5FNUbEDILYYt0sttLQCHRC4WuwsnnZJP4ynL1mvLBAhU0DFemgeadMRdaVSqBhR1cB19K9gMp3kvm9VZ7bJvaCsEUCGjLyN6gAfb/OBAde2XB0UQefq+iScklcYz+kcmJlZse1cIEPRZhweO2WS3jrhpMFh/1AD0peNDbViCmO/7X6dSKRM2i1GYxMVgAk+1tLbO8LC+Iiawxsfvbdr0ZObVqxe2yppAEzbnOL/Q5wcmA/KEzDPmvgQK74FyKPpOpiPuqwpjeo3bKlWB3FShEsKf05cmrL6P9ZezfB5vFSDQuL5UDlHZfKCmcX2Y/o4Jf6l4UkWFfJ22j9PoaRlJebQ/bSZsCZ8vRigBQpmOZmlgWMd9OjELK0ZtaVXJBDyIlY/QnjnasYb5VqEybFuhBeRB5/r4NkBvX9Cx+TAtaMhJP+RmSpsk0pmYPWvKIlii7c8NtlC2j3QhPJOu2DUjC8gDIYoU+rnAYQgkl4oJA5HWkphb/UzhNsQrCg4VC1gKxMTNQSu3kNKn2WYYyup518iQr5/cpEnohyDjkL4X1dor4Tj/AaxI26ezfxeLAAAAAElFTkSuQmCC);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.back-button.big {
+  height: 48px;
+  width: 48px;
+  left: 36px;
+  top: 40px;
+}
+button,
+.button {
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 9pt;
+  height: 32px;
+  background-color: #ccc;
+  border: 1px transparent solid;
+  color: #353535;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-raduis: 0;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 4px 10px;
+}
+button.standart,
+.button.standart {
+  min-width: 90px;
+  min-height: 32px;
+}
+button:active,
+.button:active,
+button.default:active,
+.button.default:active {
+  background-color: #000 !important;
+  color: #fff;
+}
+button:disabled,
+.button:disabled,
+button.disabled,
+.button.disabled {
+  background-color: #eaeaea;
+  color: #bebebe;
+  cursor: not-allowed;
+}
+button.default,
+.button.default {
+  background-color: #008287;
+  color: #fff;
+}
+button:focus,
+.button:focus {
+  outline: 0;
+  border: 1px #353535 dotted;
+}
+button [class*=icon-],
+.button [class*=icon-],
+.tool-button [class*=icon-] {
+  background-size: cover;
+  zoom: 1;
+}
+button.mini,
+.button.mini,
+.tool-button.mini {
+  min-height: 24px;
+  height: 26px;
+  font-size: .8em;
+}
+button.big,
+.button.big,
+.tool-button.big {
+  min-height: 48px;
+  height: 48px;
+  font-size: 1.2em;
+}
+button.big [class*=icon-],
+.button.big [class*=icon-],
+.tool-button.big [class*=icon-] {
+  margin-top: 6px;
+  zoom: 1;
+}
+.tool-button [class*=icon-] {
+  margin-top: 2px !important;
+  margin-left: 7px !important;
+}
+.tool-button.mini {
+  min-width: 22px;
+  width: 22px;
+}
+.tool-button.big {
+  min-width: 48px;
+  width: 48px;
+}
+.tool-button.big [class*=icon-] {
+  margin-top: 2px !important;
+  margin-left: 15px !important;
+}
+.command-button {
+  width: 330px;
+  text-align: left;
+  padding: 10px 20px;
+  height: auto;
+  color: #000;
+  background-color: #ccc;
+  font-family: 'Segoe UI Semilight', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 11pt;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+}
+.command-button  > small {
+  display: block;
+  font-family: 'Segoe UI Semilight', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 11pt;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+  font-size: 10pt;
+  color: #505050;
+}
+.command-button.default  > small {
+  color: #ccc;
+}
+.tool-button {
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 9pt;
+  height: 32px;
+  background-color: #ccc;
+  border: 1px transparent solid;
+  color: #353535;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-raduis: 0;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 4px 10px;
+  min-width: 32px;
+  min-height: 32px;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  position: relative;
+  padding: 0;
+}
+.tool-button.standart {
+  min-width: 90px;
+  min-height: 32px;
+}
+.tool-button:active,
+.tool-button.default:active {
+  background-color: #000 !important;
+  color: #fff;
+}
+.tool-button:disabled,
+.tool-button.disabled {
+  background-color: #eaeaea;
+  color: #bebebe;
+  cursor: not-allowed;
+}
+.tool-button.default {
+  background-color: #008287;
+  color: #fff;
+}
+.tool-button:focus {
+  outline: 0;
+  border: 1px #353535 dotted;
+}
+.tool-button [class*=icon-] {
+  background-size: cover;
+  zoom: 1;
+}
+.tool-button.mini {
+  min-height: 24px;
+  height: 26px;
+  font-size: .8em;
+}
+.tool-button.big {
+  min-height: 48px;
+  height: 48px;
+  font-size: 1.2em;
+}
+.tool-button.big [class*=icon-] {
+  margin-top: 6px;
+  zoom: 1;
+}
+.tool-button:active [class*=icon-] {
+  background-image: url("../images/icons-white.png");
+}
+.tool-button img {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+.tool-button [class*=icon-] {
+  margin-left: 8px;
+}
+.toolbar {
+  *zoom: 1;
+}
+.toolbar a,
+.toolbar button {
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 9pt;
+  height: 32px;
+  background-color: #ccc;
+  border: 1px transparent solid;
+  color: #353535;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-raduis: 0;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 4px 10px;
+  min-width: 32px;
+  min-height: 32px;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  position: relative;
+  padding: 0;
+  margin-right: 0px;
+}
+.toolbar a [class*=icon-],
+.toolbar button [class*=icon-] {
+  background-size: cover;
+  zoom: 1;
+}
+.toolbar a.mini,
+.toolbar button.mini {
+  min-height: 24px;
+  height: 26px;
+  font-size: .8em;
+}
+.toolbar a.big,
+.toolbar button.big {
+  min-height: 48px;
+  height: 48px;
+  font-size: 1.2em;
+}
+.toolbar a.big [class*=icon-],
+.toolbar button.big [class*=icon-] {
+  margin-top: 6px;
+  zoom: 1;
+}
+.toolbar a [class*=icon-],
+.toolbar button [class*=icon-] {
+  margin-top: 2px !important;
+  margin-left: 7px !important;
+}
+.toolbar a.mini,
+.toolbar button.mini {
+  min-width: 22px;
+  width: 22px;
+}
+.toolbar a.big,
+.toolbar button.big {
+  min-width: 48px;
+  width: 48px;
+}
+.toolbar a.big [class*=icon-],
+.toolbar button.big [class*=icon-] {
+  margin-top: 2px !important;
+  margin-left: 15px !important;
+}
+.toolbar a.standart,
+.toolbar button.standart {
+  min-width: 90px;
+  min-height: 32px;
+}
+.toolbar a:active,
+.toolbar button:active,
+.toolbar a.default:active,
+.toolbar button.default:active {
+  background-color: #000 !important;
+  color: #fff;
+}
+.toolbar a:disabled,
+.toolbar button:disabled,
+.toolbar a.disabled,
+.toolbar button.disabled {
+  background-color: #eaeaea;
+  color: #bebebe;
+  cursor: not-allowed;
+}
+.toolbar a.default,
+.toolbar button.default {
+  background-color: #008287;
+  color: #fff;
+}
+.toolbar a:focus,
+.toolbar button:focus {
+  outline: 0;
+  border: 1px #353535 dotted;
+}
+.toolbar a [class*=icon-],
+.toolbar button [class*=icon-] {
+  background-size: cover;
+  zoom: 1;
+}
+.toolbar a.mini,
+.toolbar button.mini {
+  min-height: 24px;
+  height: 26px;
+  font-size: .8em;
+}
+.toolbar a.big,
+.toolbar button.big {
+  min-height: 48px;
+  height: 48px;
+  font-size: 1.2em;
+}
+.toolbar a.big [class*=icon-],
+.toolbar button.big [class*=icon-] {
+  margin-top: 6px;
+  zoom: 1;
+}
+.toolbar a:active [class*=icon-],
+.toolbar button:active [class*=icon-] {
+  background-image: url("../images/icons-white.png");
+}
+.toolbar a img,
+.toolbar button img {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+.toolbar a [class*=icon-],
+.toolbar button [class*=icon-] {
+  margin-left: 8px;
+}
+.toolbar a:active [class*=icon-],
+.toolbar button:active [class*=icon-] {
+  background-image: url("../images/icons-white.png");
+}
+.toolbar a {
+  padding: 5px 0;
+}
+.toolbar:before,
+.toolbar:after {
+  display: table;
+  content: "";
+}
+.toolbar:after {
+  clear: both;
+}
+.toolbar .toolbar-group {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  float: left;
+}
+.toolbar-vertical {
+  width: 33px;
+  float: left;
+  margin-right: 10px;
+  *zoom: 1;
+}
+.toolbar-vertical a,
+.toolbar-vertical button {
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 9pt;
+  height: 32px;
+  background-color: #ccc;
+  border: 1px transparent solid;
+  color: #353535;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-raduis: 0;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 4px 10px;
+  min-width: 32px;
+  min-height: 32px;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  position: relative;
+  padding: 0;
+  margin-bottom: 5px;
+}
+.toolbar-vertical a [class*=icon-],
+.toolbar-vertical button [class*=icon-] {
+  background-size: cover;
+  zoom: 1;
+}
+.toolbar-vertical a.mini,
+.toolbar-vertical button.mini {
+  min-height: 24px;
+  height: 26px;
+  font-size: .8em;
+}
+.toolbar-vertical a.big,
+.toolbar-vertical button.big {
+  min-height: 48px;
+  height: 48px;
+  font-size: 1.2em;
+}
+.toolbar-vertical a.big [class*=icon-],
+.toolbar-vertical button.big [class*=icon-] {
+  margin-top: 6px;
+  zoom: 1;
+}
+.toolbar-vertical a [class*=icon-],
+.toolbar-vertical button [class*=icon-] {
+  margin-top: 2px !important;
+  margin-left: 7px !important;
+}
+.toolbar-vertical a.mini,
+.toolbar-vertical button.mini {
+  min-width: 22px;
+  width: 22px;
+}
+.toolbar-vertical a.big,
+.toolbar-vertical button.big {
+  min-width: 48px;
+  width: 48px;
+}
+.toolbar-vertical a.big [class*=icon-],
+.toolbar-vertical button.big [class*=icon-] {
+  margin-top: 2px !important;
+  margin-left: 15px !important;
+}
+.toolbar-vertical a.standart,
+.toolbar-vertical button.standart {
+  min-width: 90px;
+  min-height: 32px;
+}
+.toolbar-vertical a:active,
+.toolbar-vertical button:active,
+.toolbar-vertical a.default:active,
+.toolbar-vertical button.default:active {
+  background-color: #000 !important;
+  color: #fff;
+}
+.toolbar-vertical a:disabled,
+.toolbar-vertical button:disabled,
+.toolbar-vertical a.disabled,
+.toolbar-vertical button.disabled {
+  background-color: #eaeaea;
+  color: #bebebe;
+  cursor: not-allowed;
+}
+.toolbar-vertical a.default,
+.toolbar-vertical button.default {
+  background-color: #008287;
+  color: #fff;
+}
+.toolbar-vertical a:focus,
+.toolbar-vertical button:focus {
+  outline: 0;
+  border: 1px #353535 dotted;
+}
+.toolbar-vertical a [class*=icon-],
+.toolbar-vertical button [class*=icon-] {
+  background-size: cover;
+  zoom: 1;
+}
+.toolbar-vertical a.mini,
+.toolbar-vertical button.mini {
+  min-height: 24px;
+  height: 26px;
+  font-size: .8em;
+}
+.toolbar-vertical a.big,
+.toolbar-vertical button.big {
+  min-height: 48px;
+  height: 48px;
+  font-size: 1.2em;
+}
+.toolbar-vertical a.big [class*=icon-],
+.toolbar-vertical button.big [class*=icon-] {
+  margin-top: 6px;
+  zoom: 1;
+}
+.toolbar-vertical a:active [class*=icon-],
+.toolbar-vertical button:active [class*=icon-] {
+  background-image: url("../images/icons-white.png");
+}
+.toolbar-vertical a img,
+.toolbar-vertical button img {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+.toolbar-vertical a [class*=icon-],
+.toolbar-vertical button [class*=icon-] {
+  margin-left: 8px;
+}
+.toolbar-vertical a:active [class*=icon-],
+.toolbar-vertical button:active [class*=icon-] {
+  background-image: url("../images/icons-white.png");
+}
+.toolbar-vertical a {
+  padding: 5px 0;
+}
+.toolbar-vertical:before,
+.toolbar-vertical:after {
+  display: table;
+  content: "";
+}
+.toolbar-vertical:after {
+  clear: both;
+}
+.toolbar-vertical .toolbar-group {
+  margin-bottom: 20px;
+}
+.image-button {
+  position: relative;
+  border: 0;
+  padding-right: 45px;
+}
+.image-button img,
+.image-button:active img {
+  position: absolute;
+  right: 0;
+  margin-left: 32px;
+  padding: 5px;
+  height: 100%;
+  top: 0px;
+  margin-left: 0px;
+  box-sizing: border-box;
+  border: 1px transparent solid;
+  z-index: 1001;
+}
+.button-set a,
+.button-set button {
+  margin-right: 0;
+  text-align: center;
+}
+.button-set a img,
+.button-set button img {
+  background-color: transparent;
+}
+.button-set a {
+  padding: 5px 0;
+}
+.button-set button.active {
+  background-color: #008287;
+  color: #fff;
+}
+/*
+ * Metro UI CSS v 0.1.1
+ * Copyright 2012 Sergey Pimenov
+ * Licensed under the MIT Lilcense
+ *
+ * Tables.less
+ *
+ */
+table {
+  width: 100%;
+  border-collapse: separate;
+  margin: 0 0 20px;
+}
+table thead tr th,
+table thead tr td {
+  display: table-cell;
+  vertical-align: bottom;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-left: 5px;
+  border-bottom: 1px #ddd solid;
+  border-right: 1px #ddd solid;
+  border-left: 1px transparent solid;
+  border-top: 1px transparent solid;
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 11pt;
+  letter-spacing: 0.01em;
+  line-height: 14pt;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: left;
+}
+table thead tr th.right,
+table thead tr td.right {
+  text-align: right;
+  padding-right: 10px;
+}
+table thead tr th.last,
+table thead tr td.last {
+  border-right: 1px transparent solid;
+}
+table thead tr th:last-child,
+table thead tr td:last-child {
+  border-right: 1px transparent solid;
+}
+table tbody tr {
+  border: 1px #fff solid;
+}
+table tbody tr td {
+  font-family: 'Segoe UI Semilight', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 11pt;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+  padding: 3px 10px;
+  border-right: 1px #ddd solid;
+  border-bottom: 1px #ddd solid;
+  box-sizing: border-box;
+}
+table tbody tr td.right {
+  text-align: right;
+}
+table tbody tr td.center {
+  text-align: center;
+}
+table tbody tr td.last {
+  border-right: 1px transparent solid;
+}
+table tbody tr td:last-child {
+  border-right: 1px transparent solid;
+}
+table tbody tr.success {
+  background-color: #00a300 !important;
+}
+table tbody tr.error {
+  background-color: #b91d47 !important;
+}
+table tbody tr.warning {
+  background-color: #e3a21a !important;
+}
+table tbody tr.info {
+  background-color: #2d89ef !important;
+}
+table tbody tr.selected-row {
+  background-color: rgba(28, 183, 236, 0.1) !important;
+}
+table tbody tr.selected-row td:first-child {
+  border-left: 1px #1c98cc solid;
+}
+table tbody tr.selected-row td:last-child {
+  border-right: 1px #1c98cc solid;
+}
+table tbody tr.selected-row td {
+  border-top: 1px #1c98cc solid;
+  border-bottom: 1px #1c98cc solid;
+}
+table.striped tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+table.hovered {
+  border-collapse: separate !important;
+}
+table.hovered thead tr th:hover,
+table.hovered thead tr td:hover {
+  border: 1px #1c98cc solid;
+  background: rgba(28, 183, 236, 0.1);
+}
+table.hovered tbody tr:hover {
+  background-color: rgba(28, 183, 236, 0.1);
+}
+table.hovered tbody tr:hover td:first-child {
+  border-left: 1px #1c98cc solid;
+}
+table.hovered tbody tr:hover td:last-child {
+  border-right: 1px #1c98cc solid;
+}
+table.hovered tbody tr:hover td {
+  border-top: 1px #1c98cc solid;
+  border-bottom: 1px #1c98cc solid;
+}
+table.bordered {
+  border-collapse: separate !important;
+  border: 1px #ccc solid !important;
+}
+table.bordered tbody tr:last-child td {
+  border-bottom: 0;
+}
+/*
+ * Metro UI CSS v 0.1.1
+ * Copyright 2012 Sergey Pimenov
+ * Licensed under the MIT Lilcense
+ *
+ * Grid.less
+ *
+ */
+.oh,
+.ot,
+.tt {
+  float: left;
+  margin: 0 2% 2% 0;
+  width: 48%;
+}
+.ot {
+  width: 31%;
+}
+.tt {
+  width: 65%;
+}
+.cl {
+  clear: both;
+}
+.item-padding {
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+.column-padding {
+  margin: 0 10px;
+}
+.group-padding {
+  margin: 0 40px;
+}
+.span1 {
+  width: 60px;
+}
+.span2 {
+  width: 140px;
+}
+.span3 {
+  width: 220px;
+}
+.span4 {
+  width: 300px;
+}
+.span5 {
+  width: 380px;
+}
+.span6 {
+  width: 460px;
+}
+.span7 {
+  width: 540px;
+}
+.span8 {
+  width: 620px;
+}
+.span9 {
+  width: 700px;
+}
+.span10 {
+  width: 780px;
+}
+.span11 {
+  width: 860px;
+}
+.span12 {
+  width: 940px;
+}
+.offset1 {
+  margin-left: 80px;
+}
+.offset2 {
+  margin-left: 160px;
+}
+.offset3 {
+  margin-left: 240px;
+}
+.offset4 {
+  margin-left: 320px;
+}
+.offset5 {
+  margin-left: 400px;
+}
+.offset6 {
+  margin-left: 480px;
+}
+.offset7 {
+  margin-left: 560px;
+}
+.offset8 {
+  margin-left: 640px;
+}
+.offset9 {
+  margin-left: 720px;
+}
+.offset10 {
+  margin-left: 800px;
+}
+.offset11 {
+  margin-left: 880px;
+}
+.offset12 {
+  margin-left: 960px;
+}
+[class*="span"] {
+  float: none;
+  min-height: 1px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  *zoom: 1;
+}
+[class*="span"]:before,
+[class*="span"]:after {
+  display: table;
+  content: "";
+}
+[class*="span"]:after {
+  clear: both;
+}
+[class*="span"]:last-child {
+  margin-right: 0;
+}
+[class*="span"]  > img {
+  max-width: 100%;
+  height: auto;
+}
+.grid {
+  margin: 0 0 20px;
+  *zoom: 1;
+}
+.grid.no-margin {
+  margin: 0;
+}
+.grid.margin-row {
+  margin-bottom: 5px;
+}
+.grid .grid {
+  margin-top: 2.5px;
+  margin-bottom: 2.5px;
+}
+.grid .group {
+  margin-right: 80px;
+  float: left;
+  width: auto;
+  height: auto;
+  min-height: 1px;
+}
+.grid .row {
+  width: 100%;
+  *zoom: 1;
+}
+.grid .row:before,
+.grid .row:after {
+  display: table;
+  content: "";
+}
+.grid .row:after {
+  clear: both;
+}
+.grid .row [class*="span"] {
+  float: left;
+}
+.grid.element-border [class*="span"] {
+  border: 1px #ccc dotted;
+}
+.grid:before,
+.grid:after {
+  display: table;
+  content: "";
+}
+.grid:after {
+  clear: both;
+}
+/*
+ * Metro UI CSS v 0.1.1
+ * Copyright 2012 Sergey Pimenov
+ * Licensed under the MIT Lilcense
+ *
+ * Hero.less
+ *
+ */
+.hero-unit {
+  position: relative;
+  margin: 0 0 10px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  width: 100%;
+  *zoom: 1;
+}
+.hero-unit:before,
+.hero-unit:after {
+  display: table;
+  content: "";
+}
+.hero-unit:after {
+  clear: both;
+}
+/*
+ * Metro UI CSS v 0.1.1
+ * Copyright 2012 Sergey Pimenov
+ * Licensed under the MIT Lilcense
+ *
+ * Menus.less
+ *
+ */
+.navigation-bar {
+  width: 100%;
+  min-height: 40px;
+  background: #464646;
+  z-index: 10000;
+}
+.navigation-bar .navigation-bar-inner {
+  padding: 5px 20px 2px 20px;
+  color: #fff;
+  font-size: 11pt;
+  margin: auto;
+  position: relative;
+}
+.navigation-bar .navigation-bar-inner  > .brand {
+  float: left;
+  margin-right: 20px;
+  margin-top: 3px;
+}
+.navigation-bar .navigation-bar-inner  > .brand:hover {
+  background-color: transparent;
+}
+.navigation-bar .navigation-bar-inner  > .brand .icon {
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+.navigation-bar .navigation-bar-inner  > .brand .name {
+  font-family: 'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 20pt;
+  letter-spacing: 0.01em;
+  line-height: 24pt;
+  font-size: 16pt;
+  color: #fff;
+}
+.navigation-bar .navigation-bar-inner  > ul {
+  margin-left: 0;
+  list-style: none;
+  padding-top: 5px;
+  margin-top: 2px;
+}
+.navigation-bar .navigation-bar-inner  > ul  > li {
+  display: inline-block;
+  line-height: 32px;
+  position: relative;
+}
+.navigation-bar .navigation-bar-inner  > ul  > li.sub-menu {
+  padding-right: 20px;
+}
+.navigation-bar .navigation-bar-inner  > ul  > li.sub-menu:after {
+  position: absolute;
+  content: "\3009";
+  display: inline-block;
+  font-size: 10pt;
+  font-family: Helvetica, sans-serif, sans;
+  letter-spacing: 0px;
+  top: 3px;
+  right: 10px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+.navigation-bar .navigation-bar-inner  > ul  > li.sub-menu:hover:after {
+  color: #1e1e1e;
+}
+.navigation-bar .navigation-bar-inner  > ul  > li  > a {
+  color: #fff;
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 11pt;
+  letter-spacing: 0.01em;
+  line-height: 14pt;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.navigation-bar .navigation-bar-inner  > ul  > li.active,
+.navigation-bar .navigation-bar-inner  > ul  > li:hover {
+  background-color: #fff;
+}
+.navigation-bar .navigation-bar-inner  > ul  > li.active a,
+.navigation-bar .navigation-bar-inner  > ul  > li:hover a {
+  color: #1e1e1e;
+}
+.navigation-bar .navigation-bar-inner  > ul  > li  > .dropdown-menu {
+  border: 0;
+}
+.navigation-bar.fixed-top {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.navigation-bar.fixed-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.menu-pull {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+  cursor: pointer;
+  z-index: 10001;
+  background: url(../images/row24.png) no-repeat;
+  background-size: cover;
+  height: 24px;
+  width: 24px;
+  margin: 0;
+  padding: 0;
+}
+.dropdown-menu {
+  position: absolute;
+  background-color: #fff;
+  margin-left: 0;
+  list-style: none;
+  top: 100%;
+  z-index: 1001;
+  float: left;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  min-width: 160px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  display: none;
+}
+.dropdown-menu.place-right {
+  right: 0;
+  left: auto;
+}
+.dropdown-menu a {
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 11pt;
+  letter-spacing: 0.01em;
+  line-height: 14pt;
+  color: #000000;
+  display: block;
+  width: 100%;
+  padding: 3px 20px;
+  white-space: nowrap;
+  font-size: 14px;
+  cursor: pointer;
+}
+.dropdown-menu a:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+.dropdown-menu a:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+.dropdown-menu a:hover {
+  background-color: #2d89ef !important;
+  color: #ffffff !important;
+}
+.dropdown-menu li {
+  display: list-item;
+  line-height: 20px;
+}
+.dropdown-menu .divider {
+  height: 1px;
+  margin: 9px 1px;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+.dropdown-menu.open {
+  display: block !important;
+}
+.popup-menu {
+  margin-left: 0;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  z-index: 1;
+  background-color: #fff;
+  display: none;
+  border: 1px #bababa solid;
+}
+.popup-menu li {
+  float: none;
+  display: block;
+  border: 1px transparent solid !important;
+  min-width: 150px;
+}
+.popup-menu li a {
+  display: block;
+  white-space: nowrap;
+  float: none;
+  height: auto;
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 9pt;
+  color: #1e1e1e;
+  padding: 5px  10px;
+}
+.popup-menu li a:hover {
+  color: #fff;
+}
+.popup-menu li:hover {
+  background-color: #008287;
+}
+.popup-menu li.divider {
+  height: 1px !important;
+  line-height: 1px !important;
+  background-color: transparent !important;
+  border-top: 1px #bababa solid !important;
+}
+.popup-menu li.divider:hover {
+  background-color: transparent !important;
+}
+.popup-menu li.sub-menu:after {
+  position: absolute;
+  content: "\3009";
+  display: inline-block;
+  font-size: 10pt;
+  top: 5px;
+  right: 10px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.horizontal-menu {
+  background-color: #f1f1f1;
+  padding: 0px;
+  *zoom: 1;
+}
+.horizontal-menu  > ul {
+  margin-left: 0;
+  list-style: none;
+}
+.horizontal-menu  > ul li {
+  float: left;
+  position: relative;
+  border: 1px transparent solid;
+  display: block;
+}
+.horizontal-menu  > ul li:hover {
+  border: 1px #bababa solid;
+  background-color: #fff;
+}
+.horizontal-menu  > ul li.sub-menu {
+  padding-right: 20px;
+}
+.horizontal-menu  > ul li.sub-menu:after {
+  position: absolute;
+  content: "\3009";
+  display: inline-block;
+  font-size: 10pt;
+  font-family: sans;
+  top: 7px;
+  right: 10px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.horizontal-menu  > ul li a {
+  float: left;
+  padding: 5px  10px;
+  display: block;
+  z-index: 999;
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 11pt;
+  letter-spacing: 0.01em;
+  line-height: 14pt;
+  color: #000000;
+}
+.horizontal-menu  > ul li a:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+.horizontal-menu  > ul li a:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+.horizontal-menu  > ul li ul {
+  margin-left: 0;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  z-index: 1;
+  background-color: #fff;
+  display: none;
+  border: 1px #bababa solid;
+}
+.horizontal-menu  > ul li ul li {
+  float: none;
+  display: block;
+  border: 1px transparent solid !important;
+  min-width: 150px;
+}
+.horizontal-menu  > ul li ul li a {
+  display: block;
+  white-space: nowrap;
+  float: none;
+  height: auto;
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 9pt;
+  color: #1e1e1e;
+  padding: 5px  10px;
+}
+.horizontal-menu  > ul li ul li a:hover {
+  color: #fff;
+}
+.horizontal-menu  > ul li ul li:hover {
+  background-color: #008287;
+}
+.horizontal-menu  > ul li ul li.divider {
+  height: 1px !important;
+  line-height: 1px !important;
+  background-color: transparent !important;
+  border-top: 1px #bababa solid !important;
+}
+.horizontal-menu  > ul li ul li.divider:hover {
+  background-color: transparent !important;
+}
+.horizontal-menu  > ul li ul li.sub-menu:after {
+  position: absolute;
+  content: "\3009";
+  display: inline-block;
+  font-size: 10pt;
+  top: 5px;
+  right: 10px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.horizontal-menu  > ul li:hover > ul {
+  display: block;
+}
+.horizontal-menu  > ul li ul li ul {
+  position: absolute;
+  left: 100%;
+  top: -2px;
+}
+.horizontal-menu  > ul li.pull {
+  display: none;
+  float: right;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+.horizontal-menu  > ul li.pull a {
+  width: 24px;
+  height: 20px;
+  background: url(../images/pull24-dark.png) no-repeat;
+  display: block;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+}
+.horizontal-menu  > ul li.pull:hover {
+  border: 1px transparent solid;
+}
+.horizontal-menu:before,
+.horizontal-menu:after {
+  display: table;
+  content: "";
+}
+.horizontal-menu:after {
+  clear: both;
+}
+.page .page-header .page-header-content h1[data-role=dropdown] {
+  cursor: pointer;
+}
+.page .page-header .page-header-content h1[data-role=dropdown] .dropdown-menu {
+  margin-top: -10px;
+}
+.page .page-header .page-header-content h1[data-role=dropdown]:after {
+  position: absolute;
+  content: "\3009";
+  display: inline-block;
+  font-size: 10pt;
+  left: 100%;
+  top: 20px;
+  margin-left: 5px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+/*
+ * Metro UI CSS v 0.1.1
+ * Copyright 2012 Sergey Pimenov
+ * Licensed under the MIT Lilcense
+ *
+ * Notices.less
+ */
+.replies {
+  margin-left: 0;
+  list-style: none;
+}
+.replies  > div,
+.replies  > li,
+.replies  > span {
+  position: relative;
+  margin: 0 10px 10px 0;
+  display: block;
+  float: none !important;
+  width: 310px;
+  height: 150px;
+  font-family: 'Segoe UI Semilight', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 11pt;
+  letter-spacing: 0.02em;
+  line-height: 20px;
+  height: auto;
+  padding: 10px;
+}
+.replies  > div .avatar,
+.replies  > li .avatar,
+.replies  > span .avatar {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  display: table-cell;
+  vertical-align: middle !important;
+  background: #6e6e6e;
+  box-shadow-bottom: inset 0px 0px 3px #fff;
+}
+.replies  > div .avatar img,
+.replies  > li .avatar img,
+.replies  > span .avatar img {
+  width: 100%;
+  height: 100%;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+.replies  > div .reply,
+.replies  > li .reply,
+.replies  > span .reply {
+  margin-left: 60px;
+  margin-top: -50px;
+}
+.replies  > div .reply .date,
+.replies  > li .reply .date,
+.replies  > span .reply .date {
+  float: right;
+  font-size: 55%;
+  color: #ffffff;
+}
+.replies  > div .reply .author,
+.replies  > li .reply .author,
+.replies  > span .reply .author {
+  color: #ffffff;
+}
+.replies  > div .reply .text,
+.replies  > li .reply .text,
+.replies  > span .reply .text {
+  font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 9pt;
+  color: #000000;
+  color: #ffffff;
+  line-height: 16px;
+}
+.replies  > div .reply .text:hover,
+.replies  > li .reply .text:hover,
+.replies  > span .reply .text:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+.replies  > div .reply .text:active,
+.replies  > li .reply .text:active,
+.replies  > span .reply .text:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+.replies  > div .reply .text:hover,
+.replies  > li .reply .text:hover,
+.replies  > span .reply .text:hover {
+  color: #ffffff;
+}
+.replies  > div .sticker,
+.replies  > li .sticker,
+.replies  > span .sticker {
+  width: 0;
+  height: 0;
+  border-top: 10px solid #ffffff;
+  position: absolute;
+  display: block;
+  z-index: 1000;
+}
+.replies  > div .sticker.sticker-color-blue,
+.replies  > li .sticker.sticker-color-blue,
+.replies  > span .sticker.sticker-color-blue {
+  border-color: #2d89ef !important;
+}
+.replies  > div .sticker.sticker-color-blueLight,
+.replies  > li .sticker.sticker-color-blueLight,
+.replies  > span .sticker.sticker-color-blueLight {
+  border-color: #44a3aa !important;
+}
+.replies  > div .sticker.sticker-color-blueDark,
+.replies  > li .sticker.sticker-color-blueDark,
+.replies  > span .sticker.sticker-color-blueDark {
+  border-color: #0a5ac2 !important;
+}
+.replies  > div .sticker.sticker-color-green,
+.replies  > li .sticker.sticker-color-green,
+.replies  > span .sticker.sticker-color-green {
+  border-color: #00a300 !important;
+}
+.replies  > div .sticker.sticker-color-greenLight,
+.replies  > li .sticker.sticker-color-greenLight,
+.replies  > span .sticker.sticker-color-greenLight {
+  border-color: #99b433 !important;
+}
+.replies  > div .sticker.sticker-color-greenDark,
+.replies  > li .sticker.sticker-color-greenDark,
+.replies  > span .sticker.sticker-color-greenDark {
+  border-color: #005200 !important;
+}
+.replies  > div .sticker.sticker-color-red,
+.replies  > li .sticker.sticker-color-red,
+.replies  > span .sticker.sticker-color-red {
+  border-color: #b91d47 !important;
+}
+.replies  > div .sticker.sticker-color-yellow,
+.replies  > li .sticker.sticker-color-yellow,
+.replies  > span .sticker.sticker-color-yellow {
+  border-color: #ffc40d !important;
+}
+.replies  > div .sticker.sticker-color-orange,
+.replies  > li .sticker.sticker-color-orange,
+.replies  > span .sticker.sticker-color-orange {
+  border-color: #e3a21a !important;
+}
+.replies  > div .sticker.sticker-color-orangeDark,
+.replies  > li .sticker.sticker-color-orangeDark,
+.replies  > span .sticker.sticker-color-orangeDark {
+  border-color: #da532c !important;
+}
+.replies  > div .sticker.sticker-color-pink,
+.replies  > li .sticker.sticker-color-pink,
+.replies  > span .sticker.sticker-color-pink {
+  border-color: #c3325f !important;
+}
+.replies  > div .sticker.sticker-color-pinkDark,
+.replies  > li .sticker.sticker-color-pinkDark,
+.replies  > span .sticker.sticker-color-pinkDark {
+  border-color: #9f00a7 !important;
+}
+.replies  > div .sticker.sticker-color-purple,
+.replies  > li .sticker.sticker-color-purple,
+.replies  > span .sticker.sticker-color-purple {
+  border-color: #603cba !important;
+}
+.replies  > div .sticker.sticker-color-darken,
+.replies  > li .sticker.sticker-color-darken,
+.replies  > span .sticker.sticker-color-darken {
+  border-color: #1d1d1d !important;
+}
+.replies  > div .sticker.sticker-color-white,
+.replies  > li .sticker.sticker-color-white,
+.replies  > span .sticker.sticker-color-white {
+  border-color: #ffffff !important;
+}
+.replies  > div .sticker.sticker-left,
+.replies  > li .sticker.sticker-left,
+.replies  > span .sticker.sticker-left {
+  border-left: 20px solid transparent !important;
+  left: -20px;
+}
+.replies  > div .sticker.sticker-right,
+.replies  > li .sticker.sticker-right,
+.replies  > span .sticker.sticker-right {
+  border-right: 20px solid transparent !i
