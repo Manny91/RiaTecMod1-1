@@ -2,7 +2,39 @@
 <html>
 <link href="style.css" rel="stylesheet">
 <body>
+<div id="fb-root"></div>
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : 'RiaTec', // App ID from the App Dashboard
+      channelUrl : 'https://www.facebook.com/riatec?fref=ts', // Channel File for x-domain communication
+      status     : true, // check the login status upon init?
+      cookie     : true, // set sessions cookies to allow your server to access the session?
+      xfbml      : true  // parse XFBML tags on this page?
+    });
 
+    // Additional initialization code such as adding Event Listeners goes here
+
+  };
+
+  // Load the SDK's source Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div>
 	<img src="Images/logoRiatec.png" alt="Logo Riatec">
 	<img src="Images/logoUMA.png" alt="Logo Riatec" align="right">
@@ -25,6 +57,8 @@
 <hr />
 <p>El máster RIAtec es un estudio de postgrado (máster propio) de la Universidad de Málaga (UMA) orientado a ofrecer una formación intensiva sobre las últimas tecnologías relacionadas con la Web y con Internet. La principal característica del máster es la combinación de sólidos fundamentos de Ingeniería del Software aplicados a la Web, bajo la responsabilidad de profesores de la UMA, junto con la aplicación práctica de los mismos en base a tecnologías y herramientas de última generación, aspecto que es tratado por profesionales de la empresa con amplia experiencia en los temas que imparten.
 </p>
-
+<p>
+<div class="fb-like" data-href="https://www.facebook.com/riatec?fref=ts" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+</p>
 </body>
 </html>
