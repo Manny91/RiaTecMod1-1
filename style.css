@@ -115,10 +115,9 @@ p {
 	width: 70%;
 } 
  
-h1
-{
-    font-size: 1em;
-    margin: 0.67em 0;
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 h2 {
   font-size: 1.5em;
@@ -462,7 +461,6 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  
 }
 /*
  * Metro UI CSS v 0.1.1
@@ -471,17 +469,13 @@ table {
  *
  * Routines.less
  */
-.place-left
-{
-    float: left !important;
-    margin-right: 10px;
-    display: block;
+.place-left {
+  float: left !important;
+  margin-right: 10px;
 }
-.place-right
-{
-    float: right !important;
-    margin-left: 10px;
-    display: block;
+.place-right {
+  float: right !important;
+  margin-left: 10px;
 }
 .scroll-y,
 .scroll-vertical {
@@ -1056,14 +1050,13 @@ h6 {
   margin: 10px 0;
   padding: 0;
 }
-h1
-{
-    font-family: 'Segoe UI Light' , 'Open Sans' , Verdana, Arial, Helvetica, sans-serif;
-    font-weight: 200;
-    font-size: 30pt;
-    letter-spacing: 0.00em;
-    line-height: 44pt;
-    color: #000000;
+h1 {
+  font-family: 'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 42pt;
+  letter-spacing: 0.00em;
+  line-height: 44pt;
+  color: #000000;
 }
 h1:hover {
   color: rgba(0, 0, 0, 0.8);
@@ -2143,11 +2136,10 @@ button.big [class*=icon-],
  * Tables.less
  *
  */
-table
-{
-    width: auto;
-    border-collapse: separate;
-    margin: 0 0 20px;
+table {
+  width: 100%;
+  border-collapse: separate;
+  margin: 0 0 20px;
 }
 table thead tr th,
 table thead tr td {
@@ -4387,13 +4379,6 @@ pre code {
 .page-control .frames .frame.active {
   display: block;
 }
-<<<<<<< HEAD
-.accordion {
-  margin-left: 0;
-  list-style: none;
-  *zoom: 1;
-  margin-bottom: 10px;
-=======
 .accordion
 {
     margin-left: 0;
@@ -4401,7 +4386,6 @@ pre code {
     zoom: 1;
     margin-bottom: 10px;
     width: 500px;
->>>>>>> origin/Fran
 }
 .accordion:before,
 .accordion:after {
@@ -5907,12 +5891,6 @@ button:active [class*=icon-],
   width: 16px;
   height: 16px;
 }
-<<<<<<< HEAD
-div .der
-{
-  float: right;  
-}
-=======
 
 div#izq
 {
@@ -5929,4 +5907,3 @@ div#der
     margin: 20px;
     text-align: center;
 }
->>>>>>> origin/Fran
