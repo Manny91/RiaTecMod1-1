@@ -261,7 +261,7 @@ nav ol {
   list-style: none;
   list-style-image: none;
 }
- ul li b
+
 {
     color: #666666;
 }
@@ -4387,11 +4387,21 @@ pre code {
 .page-control .frames .frame.active {
   display: block;
 }
+<<<<<<< HEAD
 .accordion {
   margin-left: 0;
   list-style: none;
   *zoom: 1;
   margin-bottom: 10px;
+=======
+.accordion
+{
+    margin-left: 0;
+    list-style: none;
+    zoom: 1;
+    margin-bottom: 10px;
+    width: 500px;
+>>>>>>> origin/Fran
 }
 .accordion:before,
 .accordion:after {
@@ -5897,7 +5907,26 @@ button:active [class*=icon-],
   width: 16px;
   height: 16px;
 }
+<<<<<<< HEAD
 div .der
 {
   float: right;  
 }
+=======
+
+div#izq
+{
+    float: left;
+}
+
+div#der
+{
+    float: right;
+}
+
+#der a img
+{
+    margin: 20px;
+    text-align: center;
+}
+>>>>>>> origin/Fran
