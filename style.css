@@ -76,15 +76,15 @@ button,
 input,
 select,
 textarea {
-  font-family: sans-serif;
+  font-family: sans-serif;  
 }
 /*
  * Addresses margins handled incorrectly in IE6/7
  */
 body {
   margin-left: 150px;
-  margin-right: 150px;
-  background-color: #E6E6E6;
+  margin-right: 150px;  
+  background-color: #E6E6E6;  
 }
 /* =============================================================================
    Links
@@ -148,9 +148,10 @@ abbr[title] {
 /*
  * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
 */
-b,
-strong {
-  font-weight: bold;
+b, strong
+{
+    font-weight: bold;
+    color: #333333;
 }
 blockquote {
   margin: 1em 40px;
@@ -5916,6 +5917,8 @@ div.cuerpo
 
 div.derecha
 {
-    float:right;
-       
+    float: right;
+    /*background-color: #C0C0C0;*/
+    width: 35%;
+    margin-top:20px;        
 }
