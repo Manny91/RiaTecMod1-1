@@ -4049,18 +4049,30 @@ input[type=submit] {
   width: 220px;
   height: 165px;
 }
-.image-container {
-  position: relative;
-  padding: 5px 5px 50px;
-  background-color: #1e1e1e;
-  width: 220px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+.image-container
+{
+    position: relative;
+    padding: 5px 5px 50px;
+    background-color: #464646;
+    width: 510px;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 .image-container img {
   width: 100%;
   height: auto;
 }
+
+.image-container a
+{
+    color: #FFFFFF;
+}
+
+.image-container a:hover
+{
+    text-decoration: underline;
+}
+
 .image-container  > .overlay {
   position: absolute;
   bottom: 0;
@@ -5919,3 +5931,4 @@ div.derecha
     float:right;
        
 }
+
