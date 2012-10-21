@@ -5945,3 +5945,10 @@ div.header
 {
     background-color: #262C31;
 }
+
+img#uma
+{
+    padding-right: 30px;
+    padding-top: 15px;
+    float: right;
+}
