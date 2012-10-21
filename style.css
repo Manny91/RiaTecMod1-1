@@ -5945,3 +5945,14 @@ div.header
 {
     background-color: #262C31;
 }
+div.imagenderecha
+{
+    
+    margin-left:100px;
+    margin-top:40px;
+}
+div.imagenizquierda
+{
+    margin-right:0px;
+    margin-top:40px;
+}
