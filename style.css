@@ -5940,3 +5940,8 @@ div.footer
     padding-bottom: 50px;
     width:90%;
 }
+
+div.header
+{
+    background-color: #262C31;
+}
