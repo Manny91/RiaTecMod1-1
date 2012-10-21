@@ -4055,7 +4055,7 @@ input[type=submit] {
     position: relative;
     padding: 5px 5px 50px;
     background-color: #464646;
-    width: 510px;
+    width: 500px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
@@ -5945,6 +5945,7 @@ div.header
 {
     background-color: #262C31;
 }
+<<<<<<< HEAD
 div.imagenderecha
 {
     
@@ -5955,4 +5956,10 @@ div.imagenizquierda
 {
     margin-right:0px;
     margin-top:40px;
+}
+img#uma
+{
+    padding-right: 30px;
+    padding-top: 15px;
+    float: right;
 }
