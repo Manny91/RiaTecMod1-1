@@ -5908,16 +5908,18 @@ button:active [class*=icon-],
 div#izq
 {
     float: left;
+    width: auto;
 }
 
 div#der
 {
     float: right;
+    width: auto;
 }
 
 #der a img
 {
-    margin: 20px;
+    margin: 13px;
     text-align: center;
 }
 
@@ -5937,6 +5939,7 @@ div.derecha
 div.footer
 {
     padding-top: 15%;
+    /*padding-top: 430px;*/
     /*padding-bottom: 20px;*/
     width:90%;
     display: block;
@@ -5963,4 +5966,9 @@ img#uma
     padding-right: 30px;
     padding-top: 15px;
     float: right;
+}
+
+div.cont
+{
+    margin-bottom: 300px;
 }
