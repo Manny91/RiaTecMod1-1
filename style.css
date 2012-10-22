@@ -1054,7 +1054,7 @@ h6 {
 h1 {
   font-family: 'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
   font-weight: 200;
-  font-size: 25pt;
+  font-size: 20pt;
   letter-spacing: 0.00em;
   line-height: 44pt;
   color: #000000;
@@ -5936,9 +5936,10 @@ div.derecha
 }
 div.footer
 {
-    padding-top: 25%;
-    padding-bottom: 50px;
+    padding-top: 15%;
+    /*padding-bottom: 20px;*/
     width:90%;
+    display: block;
 }
 
 div.header
