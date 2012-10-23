@@ -4055,7 +4055,7 @@ input[type=submit] {
     position: relative;
     padding: 5px 5px 50px;
     background-color: #464646;
-    width: 500px;
+    width: 470px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
@@ -4398,7 +4398,7 @@ pre code {
     list-style: none;
     zoom: 1;
     margin-bottom: 10px;
-    width: 500px;
+    width: 430px;
 }
 .accordion:before,
 .accordion:after {
@@ -5907,12 +5907,14 @@ button:active [class*=icon-],
 
 div#izq
 {
+    position:absolute;
     float: left;
     width: auto;
 }
 
 div#der
 {
+    position:relative;
     float: right;
     width: auto;
 }
@@ -5938,11 +5940,11 @@ div.derecha
 }
 div.footer
 {
-    padding-top: 15%;
+    padding-top: 15%;    
     /*padding-top: 430px;*/
     /*padding-bottom: 20px;*/
     width:90%;
-    display: block;
+    display: block;    
 }
 
 div.header
